@@ -1,133 +1,57 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>予約表</title>
+    <title>Weekly Planner</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            background-color: #f0f0f0;
-            margin: 0;
-            padding: 20px;
         }
         .container {
-            background-color: #ffffff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            width: 90%;
-            max-width: 600px;
-            margin-top: 20px;
+            display: flex;
         }
-        h1, h2 {
-            text-align: center;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 20px 0;
-        }
-        th, td {
-            border: 1px solid #ccc;
+        .column {
+            flex: 1;
             padding: 10px;
-            text-align: center;
+            border: 1px solid #ccc;
         }
-        th {
-            background-color: #f8f8f8;
+        .column.left {
+            width: 20%;
         }
-        .footer {
+        .column.center {
+            width: 40%;
+        }
+        .column.right {
+            width: 40%;
+        }
+        h1 {
             text-align: center;
-            margin-top: 20px;
-            font-size: 0.9em;
-            color: #666;
         }
     </style>
-    <script>
-        function addWeekday(dateStr) {
-            const date = new Date(dateStr);
-            const weekdays = ['日', '月', '火', '水', '木', '金', '土'];
-            return dateStr + ' (' + weekdays[date.getDay()] + ')';
-        }
-
-        function updateTable() {
-            const table = document.querySelector('tbody');
-            const rows = table.querySelectorAll('tr');
-            rows.forEach(row => {
-                const dateCell = row.cells[0];
-                const dateText = dateCell.textContent;
-                if (!dateText.includes('(')) {
-                    dateCell.textContent = addWeekday(dateText);
-                }
-            });
-
-            const footer = document.createElement('div');
-            footer.className = 'footer';
-            footer.textContent = '最后刷新: ' + new Date().toLocaleString();
-            document.body.appendChild(footer);
-        }
-
-        document.addEventListener('DOMContentLoaded', updateTable);
-    </script>
 </head>
 <body>
+    <h1>Weekly Planner</h1>
     <div class="container">
-        <h1>王老师</h1>
-        <h2>预约表</h2>
-        <table>
-            <thead>
-                <tr>
-                    <th>日期</th>
-                    <th>10:00-12:00</th>
-                    <th>13:00-15:00</th>
-                    <th>15:00-17:00</th>
-                    <th>18:00-20:00*</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>2024-08-03</td>
-                    <td>x</td>
-                    <td>x</td>
-                    <td>○</td>
-                    <td>○</td>
-                </tr>
-                <tr>
-                    <td>2024-08-04</td>
-                    <td>○</td>
-                    <td>○</td>
-                    <td>○</td>
-                    <td>○</td>
-                </tr>
-                <tr>
-                    <td>2024-08-05</td>
-                    <td>○</td>
-                    <td>○</td>
-                    <td>○</td>
-                    <td>x</td>
-                </tr>
-                <tr>
-                    <td>2024-08-06</td>
-                    <td>x</td>
-                    <td>x</td>
-                    <td>Δ</td>
-                    <td>○</td>
-                </tr>
-                <tr>
-                    <td>2024-08-07</td>
-                    <td>○</td>
-                    <td>○</td>
-                    <td>○</td>
-                    <td>○</td>
-                </tr>
-            </tbody>
-        </table>
-        <div class="announcement">
-            <h3>備考</h3>
-            <p><strong>*表中时间段可根据情况前后调整。</strong>8月3日至8月14日间，预计全天所有时间可预约。可选择增加课节。另外，8月17日至9月5日间，预计只能预约线上课。</p>
+        <div class="column left">
+            <h2>Dates</h2>
+            <ul>
+                <li>Monday</li>
+                <li>Tuesday</li>
+                <li>Wednesday</li>
+                <li>Thursday</li>
+                <li>Friday</li>
+                <li>Saturday</li>
+                <li>Sunday</li>
+            </ul>
+        </div>
+        <div class="column center">
+            <h2>Tasks</h2>
+            <p>Add tasks or plans for the week.</p>
+        </div>
+        <div class="column right">
+            <h2>Notes</h2>
+            <p>Add additional notes or details.</p>
         </div>
     </div>
 </body>
