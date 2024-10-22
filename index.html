@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>タスク管理</title>
+    <title>リンク付きボタンの例</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -25,46 +25,55 @@
         h1 {
             text-align: center;
         }
+        button {
+            padding: 10px 15px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button a {
+            color: white;
+            text-decoration: none;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
     </style>
 </head>
 <body>
     <h1>タスク管理表</h1>
     <table>
         <tr>
-            <th>日付</th>
             <th>締め切り</th>
+            <th>内容</th>
             <th>Submit</th>
         </tr>
         <tr>
             <td>10月23日</td>
             <td>レポート提出</td>
-            <td><button>送信</button></td>
+            <td><button><a href="https://www.example.com" target="_blank">送信</a></button></td>
         </tr>
         <tr>
             <td>10月24日</td>
             <td>プレゼン準備</td>
-            <td><button>送信</button></td>
+            <td><button><a href="https://www.example.com" target="_blank">送信</a></button></td>
         </tr>
         <tr>
             <td>10月25日</td>
             <td>ミーティング資料</td>
-            <td><button>送信</button></td>
+            <td><button><a href="https://www.example.com" target="_blank">送信</a></button></td>
         </tr>
         <tr>
             <td>10月26日</td>
             <td>講義準備</td>
-            <td><button>送信</button></td>
+            <td><button><a href="https://www.example.com" target="_blank">送信</a></button></td>
         </tr>
         <tr>
             <td>10月27日</td>
             <td>宿題提出</td>
-            <td><button>送信</button></td>
+            <td><button><a href="https://www.example.com" target="_blank">送信</a></button></td>
         </tr>
-        <tr>
-            <td>10月28日</td>
-            <td>試験勉強</td>
-            <td><button>送信</button></td>
-        </tr>
-        <tr>
-            <td>10月29日</td>
-            <td>プロジェクト作業</
+    </table>
+</body>
+</html>
