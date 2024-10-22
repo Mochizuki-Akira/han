@@ -1,29 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weekly Planner</title>
+    <title>タスク管理</title>
     <style>
         body {
             font-family: Arial, sans-serif;
         }
-        .container {
-            display: flex;
+        table {
+            width: 100%;
+            border-collapse: collapse;
         }
-        .column {
-            flex: 1;
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
             padding: 10px;
-            border: 1px solid #ccc;
+            text-align: center;
         }
-        .column.left {
-            width: 20%;
-        }
-        .column.center {
-            width: 40%;
-        }
-        .column.right {
-            width: 40%;
+        th {
+            background-color: #f2f2f2;
         }
         h1 {
             text-align: center;
@@ -31,28 +28,43 @@
     </style>
 </head>
 <body>
-    <h1>Weekly Planner</h1>
-    <div class="container">
-        <div class="column left">
-            <h2>Dates</h2>
-            <ul>
-                <li>Monday</li>
-                <li>Tuesday</li>
-                <li>Wednesday</li>
-                <li>Thursday</li>
-                <li>Friday</li>
-                <li>Saturday</li>
-                <li>Sunday</li>
-            </ul>
-        </div>
-        <div class="column center">
-            <h2>Tasks</h2>
-            <p>Add tasks or plans for the week.</p>
-        </div>
-        <div class="column right">
-            <h2>Notes</h2>
-            <p>Add additional notes or details.</p>
-        </div>
-    </div>
-</body>
-</html>
+    <h1>タスク管理表</h1>
+    <table>
+        <tr>
+            <th>日付</th>
+            <th>締め切り</th>
+            <th>Submit</th>
+        </tr>
+        <tr>
+            <td>10月23日</td>
+            <td>レポート提出</td>
+            <td><button>送信</button></td>
+        </tr>
+        <tr>
+            <td>10月24日</td>
+            <td>プレゼン準備</td>
+            <td><button>送信</button></td>
+        </tr>
+        <tr>
+            <td>10月25日</td>
+            <td>ミーティング資料</td>
+            <td><button>送信</button></td>
+        </tr>
+        <tr>
+            <td>10月26日</td>
+            <td>講義準備</td>
+            <td><button>送信</button></td>
+        </tr>
+        <tr>
+            <td>10月27日</td>
+            <td>宿題提出</td>
+            <td><button>送信</button></td>
+        </tr>
+        <tr>
+            <td>10月28日</td>
+            <td>試験勉強</td>
+            <td><button>送信</button></td>
+        </tr>
+        <tr>
+            <td>10月29日</td>
+            <td>プロジェクト作業</
